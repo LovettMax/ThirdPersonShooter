@@ -23,14 +23,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 204803954639707831}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0.06975647, y: 0, z: 0, w: 0.9975641}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 204803956362784941}
   m_Father: {fileID: 204803955697124577}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 8, y: 0, z: 0}
 --- !u!1 &204803955331827228
 GameObject:
   m_ObjectHideFlags: 0
@@ -85,10 +85,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stats:
     maxHealth: 10
-    speed: 5
-    range: 5
+    speed: 2
+    range: 8
     damage: 1
     attackRate: 0.25
+  pauseAction: {fileID: -188440602207702645, guid: 5a847e1622b77df4ca98f2e4dda7f9e7, type: 3}
+  input: {fileID: 204803955942560125}
+  weapon: {fileID: 1237411536}
+  hurtSource: {fileID: 5715916303234819406}
+  deathSource: {fileID: 5625633090325420527}
 --- !u!54 &6023867962562578168
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -131,7 +136,7 @@ GameObject:
   - component: {fileID: 7215976472371464123}
   m_Layer: 0
   m_Name: Camera Motor
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -183,7 +188,7 @@ GameObject:
   - component: {fileID: 204803955942560125}
   m_Layer: 0
   m_Name: Player Input
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -259,7 +264,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 204803956362784940}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -2.5}
+  m_LocalPosition: {x: 0, y: 0.3, z: -2.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 204803954639707828}
@@ -360,7 +365,7 @@ GameObject:
   - component: {fileID: 5715916303234819406}
   m_Layer: 0
   m_Name: Hurt source
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -388,7 +393,7 @@ AudioSource:
   m_GameObject: {fileID: 1959519332171836184}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -1937483694304723502, guid: 7ffe1b62bf9cf0a4bb1ceb7ad9ea4b70, type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1
@@ -1134,8 +1139,8 @@ GameObject:
   - component: {fileID: 5164273161021103224}
   - component: {fileID: 5164273161011327944}
   m_Layer: 0
-  m_Name: Player
-  m_TagString: Untagged
+  m_Name: Render
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1167,7 +1172,7 @@ Animator:
   m_GameObject: {fileID: 5164273161020670022}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: f1d84cc28597f5641a3d9cbc4df7e306, type: 3}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 689e832c746e9e749b06b933e30c8dc4, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
@@ -2884,7 +2889,7 @@ GameObject:
   - component: {fileID: 5625633090325420527}
   m_Layer: 0
   m_Name: Death Source
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2912,7 +2917,7 @@ AudioSource:
   m_GameObject: {fileID: 6646333396726554937}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -1937483694304723502, guid: 7ffe1b62bf9cf0a4bb1ceb7ad9ea4b70, type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1
@@ -3011,7 +3016,7 @@ GameObject:
   - component: {fileID: 811855091579963686}
   m_Layer: 0
   m_Name: PlayerMotor
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3056,9 +3061,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8608845914927859266}
+  - component: {fileID: 1237411536}
   m_Layer: 0
   m_Name: Weapon
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3077,3 +3083,18 @@ Transform:
   m_Father: {fileID: 204803955331827229}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1237411536
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8507884091228165635}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6dfc728489824507aab2e34d75555e49, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shootAction: {fileID: 534436353592151077, guid: 5a847e1622b77df4ca98f2e4dda7f9e7, type: 3}
+  shootPoint: {fileID: 5164273161021103150}
+  bulletLine: {fileID: 7552554341357523691, guid: 83d3056812aae2348a2543bd9c241a21, type: 3}

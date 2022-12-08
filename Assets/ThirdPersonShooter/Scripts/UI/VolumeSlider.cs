@@ -34,7 +34,7 @@ namespace ThirdPersonShooter.Scripts.UI
 
 			slider.minValue = MIN_VALUE;
 			slider.maxValue = MAX_VALUE;
-			slider.name = paramater.Replace("Volume", "");
+			sliderName = paramater.Replace("Volume", "");
 
 			slider.value = PlayerPrefs.GetFloat(paramater, MAX_VALUE);
 			GameManager.Instance.Settings.SetVolume(paramater, slider.value);

@@ -4,7 +4,7 @@ namespace ThirdPersonShooter.Scripts.UI
 {
 	public class PauseMenu : MenuBase
 	{
-		public override string ID => "PauseMenu";
+		public override string ID => "Pause";
 
 		public override void OnOpenMenu(UIManager _manager)
 		{
