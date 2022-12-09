@@ -1304,12 +1304,16 @@ PrefabInstance:
       value: 1479372276
       objectReference: {fileID: 0}
     - target: {fileID: 6606761589654321804, guid: e710b9bf38492ca4fa8c8a8c99cca03c, type: 3}
+      propertyPath: value
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6606761589654321804, guid: e710b9bf38492ca4fa8c8a8c99cca03c, type: 3}
       propertyPath: animator
       value: 
       objectReference: {fileID: 7450808755524745880}
     - target: {fileID: 6606761589654321804, guid: e710b9bf38492ca4fa8c8a8c99cca03c, type: 3}
       propertyPath: stats.range
-      value: 1
+      value: 1.2
       objectReference: {fileID: 0}
     - target: {fileID: 6606761589654321804, guid: e710b9bf38492ca4fa8c8a8c99cca03c, type: 3}
       propertyPath: stats.speed
@@ -1317,7 +1321,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6606761589654321804, guid: e710b9bf38492ca4fa8c8a8c99cca03c, type: 3}
       propertyPath: stats.damage
-      value: 1.5
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6606761589654321804, guid: e710b9bf38492ca4fa8c8a8c99cca03c, type: 3}
+      propertyPath: stats.maxHealth
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 6606761589654321804, guid: e710b9bf38492ca4fa8c8a8c99cca03c, type: 3}
       propertyPath: stats.attackRate

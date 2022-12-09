@@ -1106,7 +1106,7 @@ SkinnedMeshRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: 90309a9ae07af7a4baf27031c594f369, type: 2}
-  - {fileID: 2100000, guid: 51d14e0fd3936be48bf8d5031d3e24c7, type: 2}
+  - {fileID: 2100000, guid: 48d758d4edfcb904691f8a687bba218e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1311,7 +1311,7 @@ PrefabInstance:
       objectReference: {fileID: 5533283126320346095}
     - target: {fileID: 6606761589654321804, guid: e710b9bf38492ca4fa8c8a8c99cca03c, type: 3}
       propertyPath: stats.range
-      value: 1
+      value: 1.2
       objectReference: {fileID: 0}
     - target: {fileID: 6606761589654321804, guid: e710b9bf38492ca4fa8c8a8c99cca03c, type: 3}
       propertyPath: stats.damage
@@ -1319,7 +1319,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6606761589654321804, guid: e710b9bf38492ca4fa8c8a8c99cca03c, type: 3}
       propertyPath: stats.maxHealth
-      value: 2
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6606761589654321804, guid: e710b9bf38492ca4fa8c8a8c99cca03c, type: 3}
+      propertyPath: stats.attackRate
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 7939270008899114862, guid: e710b9bf38492ca4fa8c8a8c99cca03c, type: 3}
       propertyPath: m_RootOrder
